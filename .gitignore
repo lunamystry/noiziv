@@ -1,0 +1,10 @@
+doc/build
+build
+noiziv_base.log
+.waf-1.7.2-89df5661dd0948598701ec3b9c0a4216
+.waf3-1.7.2-89df5661dd0948598701ec3b9c0a4216
+.waf*
+.lock-waf_linux2_build
+logs
+log
+results.log
