@@ -1,4 +1,5 @@
 doc/build
+doc/source/doxy
 build
 noiziv_base.log
 .waf-1.7.2-89df5661dd0948598701ec3b9c0a4216
