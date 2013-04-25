@@ -1,0 +1,246 @@
+
+<!DOCTYPE html>
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>Getting started with git &mdash; noiziV 03.08 documentation</title>
+    
+    <link rel="stylesheet" href="../_static/solar.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/breathe.css" type="text/css" />
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    '../',
+        VERSION:     '03.08',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true
+      };
+    </script>
+    <script type="text/javascript" src="../_static/jquery.js"></script>
+    <script type="text/javascript" src="../_static/underscore.js"></script>
+    <script type="text/javascript" src="../_static/doctools.js"></script>
+    <script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <link rel="top" title="noiziV 03.08 documentation" href="../index.html" />
+    <link rel="next" title="Doxygen" href="../doxygen/index.html" />
+    <link rel="prev" title="Welcome to noiziV documentation!" href="../index.html" /><link href='http://fonts.googleapis.com/css?family=Source+Code+Pro|Open+Sans:300italic,400italic,700italic,400,300,700' rel='stylesheet' type='text/css'>
+<link href="../_static/solarized-dark.css" rel="stylesheet">
+  </head>
+  <body>
+    <div class="related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="../doxygen/index.html" title="Doxygen"
+             accesskey="N">next</a> |</li>
+        <li class="right" >
+          <a href="../index.html" title="Welcome to noiziV documentation!"
+             accesskey="P">previous</a> |</li>
+        <li><a href="../index.html">noiziV 03.08 documentation</a> &raquo;</li> 
+      </ul>
+    </div>
+      <div class="sphinxsidebar">
+        <div class="sphinxsidebarwrapper">
+  <h3><a href="../index.html">Table Of Contents</a></h3>
+  <ul>
+<li><a class="reference internal" href="#">Getting started with git</a><ul>
+<li><a class="reference internal" href="#introduction">Introduction</a></li>
+<li><a class="reference internal" href="#installation">installation</a><ul>
+<li><a class="reference internal" href="#ubuntu">Ubuntu</a></li>
+<li><a class="reference internal" href="#windows">Windows</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#configuration">Configuration</a></li>
+<li><a class="reference internal" href="#git-primer">Git primer</a><ul>
+<li><a class="reference internal" href="#how-it-works">How it works</a></li>
+<li><a class="reference internal" href="#usage">Usage</a></li>
+<li><a class="reference internal" href="#further-reading">Further reading</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
+  <h4>Previous topic</h4>
+  <p class="topless"><a href="../index.html"
+                        title="previous chapter">Welcome to noiziV documentation!</a></p>
+  <h4>Next topic</h4>
+  <p class="topless"><a href="../doxygen/index.html"
+                        title="next chapter">Doxygen</a></p>
+  <h3>This Page</h3>
+  <ul class="this-page-menu">
+    <li><a href="../_sources/git/index.txt"
+           rel="nofollow">Show Source</a></li>
+  </ul>
+<div id="searchbox" style="display: none">
+  <h3>Quick search</h3>
+    <form class="search" action="../search.html" method="get">
+      <input type="text" name="q" />
+      <input type="submit" value="Go" />
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+    <p class="searchtip" style="font-size: 90%">
+    Enter search terms or a module, class or function name.
+    </p>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+        </div>
+      </div>
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body">
+            
+  <div class="section" id="getting-started-with-git">
+<h1>Getting started with git<a class="headerlink" href="#getting-started-with-git" title="Permalink to this headline">¶</a></h1>
+<img alt="git logo" class="align-center" src="../_images/git_logo.png" style="width: 300px;" />
+<div class="section" id="introduction">
+<h2>Introduction<a class="headerlink" href="#introduction" title="Permalink to this headline">¶</a></h2>
+<p>Git is probably the most popular version control system out there. It
+was created by the great Linus Torvalds (guy who gave us Linux) and is
+free and open source. This document will guide you through the
+installation of git on Linux and Windows. It will also give
+configuration and basically help you with getting started.</p>
+</div>
+<div class="section" id="installation">
+<h2>installation<a class="headerlink" href="#installation" title="Permalink to this headline">¶</a></h2>
+<p>This section will give instructions on how to git install on both
+Windows and Ubuntu. If you don&#8217;t run either (read you run Apple) of
+these you will have to find out for yourself.</p>
+<div class="section" id="ubuntu">
+<h3>Ubuntu<a class="headerlink" href="#ubuntu" title="Permalink to this headline">¶</a></h3>
+<ol class="arabic simple">
+<li>Launch a terminal (<cite>Ctrl+t</cite>)</li>
+<li>run the install command <tt class="docutils literal"><span class="pre">sudo</span> <span class="pre">apt-get</span> <span class="pre">install</span> <span class="pre">git</span></tt> (easy No?)</li>
+</ol>
+</div>
+<div class="section" id="windows">
+<h3>Windows<a class="headerlink" href="#windows" title="Permalink to this headline">¶</a></h3>
+<ol class="arabic">
+<li><p class="first">You first have to download it from <a class="reference external" href="http://msysgit.github.com">msysgit on github</a></p>
+</li>
+<li><p class="first">Double click on the installer to install.</p>
+<ul>
+<li><p class="first">When prompted about line ending conversion, don&#8217;t choose the last
+option. See image below</p>
+<blockquote>
+<div><img alt="choosing window to unix line ending" class="align-center" src="../_images/choose_window_to_unix.png" style="width: 300px;" />
+</div></blockquote>
+</li>
+</ul>
+</li>
+</ol>
+</div>
+</div>
+<div class="section" id="configuration">
+<h2>Configuration<a class="headerlink" href="#configuration" title="Permalink to this headline">¶</a></h2>
+<p>The simplest way I found to use on Windows was using Git bash which is
+installed with git. This seems to give Linux bash type commands on
+windows. This means then you can use the same instructions as the
+Ubuntu. All the commands below must be run from either a terminal
+(Ubuntu) or git bash (Windows).</p>
+<ol class="arabic">
+<li><p class="first">Introduce yourself to git:</p>
+<div class="highlight-python"><pre>git config user.name "Firstname Lastname"
+git config user.email "your@email.co.za"
+git config core.editor "your text editor" # not tested!</pre>
+</div>
+</li>
+<li><p class="first">generate ssh keys (take note of where the keys are stored)
+<a class="reference external" href="https://help.github.com/articles/working-with-ssh-key-passphrases">why passphrases matter</a>:</p>
+<div class="highlight-python"><pre>ssh-keygen -t rsa -C "your@email.co.za"</pre>
+</div>
+</li>
+<li><p class="first">Register on the Social coding platform, <a class="reference external" href="http://github.com">Github</a></p>
+</li>
+<li><p class="first">Send your username to <a class="reference external" href="mailto:leonard&#46;mbuli&#37;&#52;&#48;students&#46;wits&#46;ac&#46;za">Mandla</a>
+get an invite to the noiziv repository.</p>
+</li>
+<li><p class="first">Wait for Mandla to add you to repo authorized list (about a day)</p>
+</li>
+<li><p class="first">Fork the repo
+<a class="reference external" href="https://help.github.com/articles/fork-a-repo">instructions on github</a>
+The commands adapted for noiziv (change username to your username):</p>
+<div class="highlight-python"><pre>git clone https://github.com/username/noiziv.git /directory/where/you/want/code/stored
+# Clones your fork of the repository into the current directory in terminal
+cd /directory/where/you/want/code/stored
+git remote add upstream https://github.com/APPM3021/noiziv.git
+git fetch upstream
+git merge upstream/master</pre>
+</div>
+</li>
+</ol>
+<p>That should give you the latest code in the repository. The next
+section gives a quick git primer and some everyday use.</p>
+</div>
+<div class="section" id="git-primer">
+<h2>Git primer<a class="headerlink" href="#git-primer" title="Permalink to this headline">¶</a></h2>
+<p>Okay git is installed, how do you use it? First, lets talk about how
+it all works and what some words mean.</p>
+<div class="section" id="how-it-works">
+<h3>How it works<a class="headerlink" href="#how-it-works" title="Permalink to this headline">¶</a></h3>
+<p>COMING SOON!</p>
+</div>
+<div class="section" id="usage">
+<h3>Usage<a class="headerlink" href="#usage" title="Permalink to this headline">¶</a></h3>
+<p>Before you hack away:</p>
+<div class="highlight-python"><pre>git pull origin master
+git log  # see commit messages</pre>
+</div>
+<p>After hacking away:</p>
+<div class="highlight-python"><pre>git status # see what changed
+git add &lt;files you changed&gt; # avoid git add .
+git commit -m "Message of what you did"
+git push origin master</pre>
+</div>
+</div>
+<div class="section" id="further-reading">
+<h3>Further reading<a class="headerlink" href="#further-reading" title="Permalink to this headline">¶</a></h3>
+<p>If you are not satified with what I presented above (I wonder why)
+then you can read some more things:</p>
+<ol class="arabic simple">
+<li><a class="reference external" href="http://learn.github.com/p/intro.html">Github&#8217;s intro</a></li>
+<li><a class="reference external" href="http://eagain.net/articles/git-for-computer-scientists/">Git for computer scientists</a></li>
+<li><a class="reference external" href="http://git-scm.com/book">Pro git book</a></li>
+<li><a class="reference external" href="http://sixrevisions.com/resources/git-tutorials-beginners">Ten tutorials for beginners</a></li>
+</ol>
+</div>
+</div>
+</div>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../genindex.html" title="General Index"
+             >index</a></li>
+        <li class="right" >
+          <a href="../doxygen/index.html" title="Doxygen"
+             >next</a> |</li>
+        <li class="right" >
+          <a href="../index.html" title="Welcome to noiziV documentation!"
+             >previous</a> |</li>
+        <li><a href="../index.html">noiziV 03.08 documentation</a> &raquo;</li> 
+      </ul>
+    </div>
+    <div class="footer">
+        &copy; Copyright 2013, University of the Witwatersrand, Johannesburg .
+    Created using <a href="http://sphinx.pocoo.org/">Sphinx</a> 1.1.3.Theme by <a href="http://github.com/vkvn">vkvn</a>
+    </div>
+  </body>
+</html>
