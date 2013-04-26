@@ -6,7 +6,7 @@
   <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     
-    <title>Getting started with git &mdash; noiziV 03.08 documentation</title>
+    <title>Getting started with gtest &mdash; noiziV 03.08 documentation</title>
     
     <link rel="stylesheet" href="../_static/solar.css" type="text/css" />
     <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
@@ -46,16 +46,22 @@
         <div class="sphinxsidebarwrapper">
   <h3><a href="../index.html">Table Of Contents</a></h3>
   <ul>
-<li><a class="reference internal" href="#">Getting started with git</a><ul>
+<li><a class="reference internal" href="#">Getting started with gtest</a><ul>
 <li><a class="reference internal" href="#introduction-and-installation">Introduction and Installation</a></li>
 <li><a class="reference internal" href="#configuration">Configuration</a><ul>
-<li><a class="reference internal" href="#step-1-create-an-empty-project">Step 1 - Create an empty project</a></li>
+<li><a class="reference internal" href="#step-1-get-the-code">Step 1 - Get the code</a></li>
+<li><a class="reference internal" href="#step-2-create-an-empty-project">Step 2 - Create an empty project</a></li>
+<li><a class="reference internal" href="#step-3-remove-the-default-main">Step 3 - Remove the default main</a></li>
+<li><a class="reference internal" href="#step-4-add-source-code">Step 4 - Add source code</a></li>
+<li><a class="reference internal" href="#step-5-add-test-code">Step 5 - Add test code</a></li>
+<li><a class="reference internal" href="#step-6-add-google-test">Step 6 - Add google test</a></li>
+<li><a class="reference internal" href="#step-7-change-project-build-options">Step 7 - Change project build options</a></li>
+<li><a class="reference internal" href="#step-8-add-search-directories">Step 8 - Add search directories</a></li>
+<li><a class="reference internal" href="#step-9-linker">Step 9 - Linker</a></li>
+<li><a class="reference internal" href="#step-10-wrap-up">Step 10 - Wrap up</a></li>
 </ul>
 </li>
-<li><a class="reference internal" href="#gtest-primer">Gtest primer</a><ul>
-<li><a class="reference internal" href="#further-reading">Further reading</a></li>
-</ul>
-</li>
+<li><a class="reference internal" href="#gtest-primer">Gtest primer</a></li>
 </ul>
 </li>
 </ul>
@@ -89,9 +95,8 @@
         <div class="bodywrapper">
           <div class="body">
             
-  <div class="section" id="getting-started-with-git">
-<h1>Getting started with git<a class="headerlink" href="#getting-started-with-git" title="Permalink to this headline">¶</a></h1>
-<img alt="git logo" class="align-center" src="../_images/git_logo1.png" style="width: 300px;" />
+  <div class="section" id="getting-started-with-gtest">
+<h1>Getting started with gtest<a class="headerlink" href="#getting-started-with-gtest" title="Permalink to this headline">¶</a></h1>
 <div class="section" id="introduction-and-installation">
 <h2>Introduction and Installation<a class="headerlink" href="#introduction-and-installation" title="Permalink to this headline">¶</a></h2>
 <p>The google test C++ testing framework (gtest for short) is a framework
@@ -101,46 +106,120 @@ to set it up in codeblocks for APPM3021. I tested this on the latest
 codeblock (12.11). The guide assumes you have a
 certain file structure:</p>
 <div class="highlight-python"><pre>noiziv
-  ├── config
   ├── doc
   ├── lib
   ├── log
   ├── src
   └── tests</pre>
 </div>
-<p>Hopefully the names of the files make sense and I don&#8217;t need to
-explain them. Gtest can be downloaded from their <a href="#id1"><span class="problematic" id="id2">`google code page`_</span></a>.
+<p>Hopefully the names of the files make sense and I am not going to
+explain them. Gtest can be downloaded from their <a href="#id3"><span class="problematic" id="id4">`google code page`_</span></a>.
 It is a zip archive <cite>(gtest-1.6.zip)</cite>. You unzip it, rename the
 resulting folder <cite>gtest-1.6</cite> as <cite>gtest</cite> and drop it in <cite>lib</cite> in the
 above file structure.</p>
+<p>..note:: If you are using noiziv, the above downloading
+and extraction is done. Gtest can be found in the lib directory.</p>
 </div>
 <div class="section" id="configuration">
 <h2>Configuration<a class="headerlink" href="#configuration" title="Permalink to this headline">¶</a></h2>
 <p>The configurations can be done in two ways. Globally and per project.
 I will be showing the per project method here.</p>
-<div class="section" id="step-1-create-an-empty-project">
-<h3>Step 1 - Create an empty project<a class="headerlink" href="#step-1-create-an-empty-project" title="Permalink to this headline">¶</a></h3>
-<p>If you have an existing project, I recommend you create a new project
-anyway. This is to show you how the whole setup is done then you can
-apply it to your existing project. It also makes it easier for you to
-follow this guide.
-The project is a console application,</p>
-<img alt="git logo" class="align-center" src="../_images/" style="width: 300px;" />
+<div class="section" id="step-1-get-the-code">
+<h3>Step 1 - Get the code<a class="headerlink" href="#step-1-get-the-code" title="Permalink to this headline">¶</a></h3>
+<p>You will have to follow the git instructions on <a class="reference internal" href="../git/index.html"><em>Getting started with git</em></a></p>
+</div>
+<div class="section" id="step-2-create-an-empty-project">
+<h3>Step 2 - Create an empty project<a class="headerlink" href="#step-2-create-an-empty-project" title="Permalink to this headline">¶</a></h3>
+<p>If you have an existing project, I recommend you create a new project anyway.
+This is to show you how the whole setup is done then you can apply it to your
+existing project. It also makes it easier for you to follow this guide.  The
+project is a console application,</p>
+<img alt="select console application" class="align-center" src="../_images/1_select_console_application.png" style="width: 600px;" />
+<p>You should create a new directory inside the noiziv code which you clone from
+github. This is because different people use different methods of compiling their
+code. This is the first step in making your codeblock specific files don&#8217;t bother
+other people. The screenshot below shows a possible name for the project directory.</p>
+<img alt="select code directory" class="align-center" src="../_images/2_select_code_directory.png" style="width: 600px;" />
+<p>This would be your resultant file structure:</p>
+<div class="highlight-python"><pre>noiziv
+  ├── doc
+  ├── lib
+  ├── log
+  ├── src
+  └── tests</pre>
+</div>
+</div>
+<div class="section" id="step-3-remove-the-default-main">
+<h3>Step 3 - Remove the default main<a class="headerlink" href="#step-3-remove-the-default-main" title="Permalink to this headline">¶</a></h3>
+<p>Codeblocks will create a default main with a simple helloworld program. Simply
+remove this from the project by right click on the main.cpp file and selecting
+remove. A nice screenshot:</p>
+<img alt="select code directory" class="align-center" src="gtest/screenshots/3_remove_default_main.png" style="width: 600px;" />
+</div>
+<div class="section" id="step-4-add-source-code">
+<h3>Step 4 - Add source code<a class="headerlink" href="#step-4-add-source-code" title="Permalink to this headline">¶</a></h3>
+<p>Now you add the source code. You do this by right clicking on the project name
+and selecting <cite>Add files recursively...</cite> a screenshot speaks volumes.</p>
+<img alt="select code directory" class="align-center" src="../_images/4_add_files_recursively.png" style="width: 300px;" />
+<p>If you still have a codeblocks directory in your project structure, see step 3.</p>
+</div>
+<div class="section" id="step-5-add-test-code">
+<h3>Step 5 - Add test code<a class="headerlink" href="#step-5-add-test-code" title="Permalink to this headline">¶</a></h3>
+<p>Now if everyone plays nice and uses gtest and this file strucure, all test code
+will be in the directory <cite>tests</cite>. You add it similar to how you added the source
+code in the previous step.</p>
+<img alt="select code directory" class="align-center" src="../_images/5_select_src_then_tests.png" style="width: 300px;" />
+</div>
+<div class="section" id="step-6-add-google-test">
+<h3>Step 6 - Add google test<a class="headerlink" href="#step-6-add-google-test" title="Permalink to this headline">¶</a></h3>
+<p>Now the real reason we are here: Adding googletest. This is done in a similar way
+to the <cite>src</cite> and <cite>tests</cite> but you don&#8217;t &#8220;Add files recursively...&#8221; anymore. Rather,
+you &#8220;Add files...&#8221;. You then select <cite>lib/gtest/src/gtest-all.cc</cite>. Screenshot for
+your viewing pleasure:</p>
+<img alt="add gtest all" class="align-center" src="../_images/6_now_add_gtest_all.png" style="width: 300px;" />
+<img alt="gtest is under lib" class="align-center" src="../_images/6_gtest_is_under_lib.png" style="width: 600px;" />
+</div>
+<div class="section" id="step-7-change-project-build-options">
+<h3>Step 7 - Change project build options<a class="headerlink" href="#step-7-change-project-build-options" title="Permalink to this headline">¶</a></h3>
+<p>Now we configure the codeblocks compiler and linker to find the header files
+for googletest and for src when running tests. First right click on the project
+name and select <cite>Build options...</cite>. The screenshot can be found below:</p>
+<img alt="per project build options" class="align-center" src="../_images/7_build_options_for_the_project.png" style="width: 300px;" />
+</div>
+<div class="section" id="step-8-add-search-directories">
+<h3>Step 8 - Add search directories<a class="headerlink" href="#step-8-add-search-directories" title="Permalink to this headline">¶</a></h3>
+<p>In the project build options dialog, select the search directories tab:</p>
+<img alt="per project build options" class="align-center" src="../_images/8_search_directories.png" style="width: 600px;" />
+<p>Click the add button and you get another dialog to select directories:</p>
+<img alt="per project build options" class="align-center" src="../_images/8_add_search_directories.png" style="width: 600px;" />
+<p>Click the button with ellipsis (three dots). Select the directories to be searched.
+See the screenshot below for what these are:</p>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">eigen in the below screenshot is an example library which you have <a href="#id1"><span class="problematic" id="id2">`</span></a>#include`d.</p>
+</div>
+<img alt="per project build options" class="align-center" src="../_images/8_resulting_add_search_directories.png" style="width: 600px;" />
+</div>
+<div class="section" id="step-9-linker">
+<h3>Step 9 - Linker<a class="headerlink" href="#step-9-linker" title="Permalink to this headline">¶</a></h3>
+<p>Now you need to tell the linker about a library which googletest needs called pthread.
+Simply select <cite>Linker Settings</cite>. Click on the add button and type <cite>pthread</cite>. If you don&#8217;t
+mention the picture in the main body of the report it should not be there. I am thus
+mentioning the image below.</p>
+<img alt="pthread under linker" class="align-center" src="../_images/9_add_pthread_under_linker.png" style="width: 600px;" />
+</div>
+<div class="section" id="step-10-wrap-up">
+<h3>Step 10 - Wrap up<a class="headerlink" href="#step-10-wrap-up" title="Permalink to this headline">¶</a></h3>
+<p>That is it. The image below shows how your project view might look:</p>
+<img alt="pthread under linker" class="align-center" src="../_images/10_the_resulting_project_tree.png" style="width: 300px;" />
+<p>Then after you press <cite>F9</cite> you would get something similar to:</p>
+<img alt="pthread under linker" class="align-center" src="../_images/10_F9_and_Voila.png" style="width: 600px;" />
 </div>
 </div>
 <div class="section" id="gtest-primer">
 <h2>Gtest primer<a class="headerlink" href="#gtest-primer" title="Permalink to this headline">¶</a></h2>
-<div class="section" id="further-reading">
-<h3>Further reading<a class="headerlink" href="#further-reading" title="Permalink to this headline">¶</a></h3>
-<p>If you are not satified with what I presented above (I wonder why)
-then you can read some more things:</p>
-<ol class="arabic simple">
-<li><a class="reference external" href="http://learn.github.com/p/intro.html">Github&#8217;s intro</a></li>
-<li><a class="reference external" href="http://eagain.net/articles/git-for-computer-scientists/">Git for computer scientists</a></li>
-<li><a class="reference external" href="http://git-scm.com/book">Pro git book</a></li>
-<li><a class="reference external" href="http://sixrevisions.com/resources/git-tutorials-beginners">Ten tutorials for beginners</a></li>
-</ol>
-</div>
+<p>I don&#8217;t think I can do a better job than the people who made gtest so...
+<a class="reference external" href="http:/code.google.com/p/googletest/wiki/Primer">Google test primer</a></p>
 </div>
 </div>
 
